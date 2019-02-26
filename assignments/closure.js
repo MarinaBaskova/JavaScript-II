@@ -1,5 +1,26 @@
+
 // ==== Challenge 1: Write your own closure ====
 // Write a simple closure of your own creation.  Keep it simple!
+
+function a() {
+  const one = 'from a';
+  console.log(`Hello ${one}`);
+  let messageToShare = "Hello World";
+
+  function b() {
+    const two = "from b";
+    console.log(`${messageToShare} ${one} and ${two}!`);
+
+    function c() {
+      const three = "from c";
+      console.log(`${messageToShare} ${one}, ${two} and ${three}!`);
+    }
+    c();
+  }
+  b();
+}
+
+a();
 
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
