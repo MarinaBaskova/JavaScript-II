@@ -89,10 +89,27 @@ contains("Book", items, function(item){
   console.log(item);
 });
 
+
+
+
+
+
 /* STRETCH PROBLEM */
 
+const myitems = ['Pencil', 'Gum', 'Notebook', 'yo-yo', 'Gum'];
+
 function removeDuplicates(array, cb) {
+  var itemsUnique = array.filter(cb);
+  console.log(itemsUnique);
+
   // removeDuplicates removes all duplicate values from the given array.
   // Pass the duplicate free array to the callback function.
   // Do not mutate the original array.
 }
+
+removeDuplicates(myitems, function(item, index, arr){
+  console.log(arr.indexOf(item));
+  return index == arr.indexOf(item);
+});
+
+
